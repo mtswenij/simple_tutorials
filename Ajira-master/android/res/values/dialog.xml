@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sortBy">
+        <item>date</item>
+        <item>number Of Bids</item>
+        <item>owned</item>
+        <item>price (high to low)</item>
+        <item>price (low to high)</item>
+        <item>closed owned</item>
+        <item>open owned</item>
+        <item>newest</item>
+        <item>bid deadline is today</item>
+        <item>bid deadline (closest to farthest)</item>
+        <item>bid deadline (farthest to closest)</item>      
+    </string-array>
+    <string name="sortby">sort by</string>
+    
+</resources>

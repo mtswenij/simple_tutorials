@@ -1,0 +1,171 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:scrollbars="vertical" >
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="1100dp" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:text="@string/MicroJobDescription"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="275dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:inputType="textMultiLine" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        android:text="@string/DeliveryDate"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView3"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:inputType="date" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="@string/DeliveryTime"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:inputType="time" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="@string/MaxPrice"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/editText4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView4"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="31dp"
+        android:text="@string/QualitySettings"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView5"
+        android:layout_centerHorizontal="true"
+        android:text="Yo"
+        tools:ignore="HardcodedText" />
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/progressBar1"
+        android:layout_centerHorizontal="true" />
+    <ProgressBar
+        android:id="@+id/progressBar3"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/progressBar2"
+        android:layout_centerHorizontal="true" />
+    <ProgressBar
+        android:id="@+id/progressBar4"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/progressBar3"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/changeQualityPrefs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/progressBar4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:text="@string/ChangeQualitySettings" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/changeQualityPrefs"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="29dp"
+        android:text="@string/CurrentDeliveryLocation"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <CheckBox
+        android:id="@+id/defaultLoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView6"
+        android:layout_below="@+id/textView6"
+        android:text="Use Your Default Location" />
+    
+    <Button
+        android:id="@+id/anotherLoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/progressBar4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:text="Enter another Location" />
+
+</RelativeLayout>
+
+</ScrollView>

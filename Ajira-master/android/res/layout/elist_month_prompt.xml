@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/list_item_child">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="10dp"
+        android:text="text" />
+
+    <Spinner
+        android:id="@+id/month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:prompt="@string/monthPrompt"
+        android:entries="@array/month"
+        />
+
+      <Spinner
+        android:id="@+id/year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:prompt="@string/yearPrompt"
+        android:entries="@array/year"
+         />
+
+</LinearLayout>

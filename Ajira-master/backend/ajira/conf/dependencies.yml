@@ -1,0 +1,28 @@
+# Application Dependencies
+
+require:
+   - play -> play 1.2.7
+   - play -> siena 2.0.7
+   - play -> gae 1.6.0
+   - play -> crudsiena 2.0.3
+   - com.google.android.gcm -> gcm-server 1.0.2
+   - com.googlecode.json-simple -> json-simple 1.1.1
+   - net.sf.flexjson -> flexjson 2.1
+   
+repositories: 
+  
+  - gcm-server: 
+        type:       http
+        artifact:   "https://github.com/slorber/gcm-server-repository/raw/master/releases/com/google/android/gcm/gcm-server/1.0.2/[module]-[revision].[ext]"
+        contains:
+               - com.google.android.gcm -> *
+  - json-simple: 
+        type:       http
+        artifact:   "http://json-simple.googlecode.com/files/[module]-[revision].[ext]"
+        contains:
+               - com.googlecode.json-simple -> *
+  - flexjson: 
+        type:       http
+        artifact:   "http://repo1.maven.org/maven2/net/sf/flexjson/flexjson/2.1/[module]-[revision].[ext]"
+        contains:
+               - net.sf.flexjson -> *

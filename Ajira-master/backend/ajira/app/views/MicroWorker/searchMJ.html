@@ -1,0 +1,72 @@
+#{extends 'main.html' /}
+#{set title:'Micro Worker Dashboard' /}
+    
+    <section class="content-wrapper main-content clear-fix">
+    <h1>Micro Worker Dash-Board</h1> 
+	Role: <select name="role" style="width:200px; margin-right:10px;" onchange="getDashBoard(this.value)">	
+			<option value="1">Micro Worker</option>
+			<option value="0">Micro Employer</option>
+		  </select>
+
+	<table>
+	<tr style="vertical-align:bottom">
+		<td>
+			| <b style="font-size:1.25em"><a href="/MicroWorker">Current MicroJobs</a></b> |
+			<b style="font-size:1.25em"><a href="/MicroWorker/PastMicroJobs">Past MicroJobs</a></b> |
+			<b style="font-size:1.25em"><a href="/MicroWorker/AllMicroJobs">All MicroJobs</a></b> |
+			<b style="font-size:1.25em"><a style="color:grey" href="/MicroWorker/RecommendedMicroJobs">Recommended MicroJobs</a></b> |
+			<b style="font-size:1.25em"><a style="color:red" href="/MicroWorker/SearchMicroJobs">Search MicroJobs</a></b> |
+			<b style="font-size:1.25em"><a style="color:grey" href="/MicroWorker/Bids">Current Bids</a></b> |
+		</td>
+	</tr>
+	</table>
+    <table style="width:1050px;">
+    <tr style="background-color:grey;color:white;">
+    	<th style="width:200px;text-align:center">Options</th>
+    	<th style="width:850px;">Search MicroJobs <b style="color:white">[${count}]</b></th>
+    </tr>
+    <tr style="vertical-align:top">
+    	<td>
+    		<br/>
+    		<a href="/ViewMap/">View Map</a><br/><br/>		     		
+    		<a href="/AccountSettings">Account Settings</a><br/><br/>
+    	</td>
+    	<td>
+	     	<table style="width:850px;">
+	     	<tr style="vertical-align:top;">
+	     		<th style="text-align:center">Job ID</th>
+				<th style="text-align:center">Job Status</th>
+				<th style="text-align:center">Delivery Date</th>
+				<th style="text-align:center">Submission Date</th>
+				<th style="text-align:center">MicroWorker</th>
+				<th style="text-align:center">Options</th>
+	     	</tr>
+	     	#{list items:jobs, as:'job'}
+	     	<tr style="vertical-align:top;text-align:center">
+	     		<td>${job.microJobID}</td>
+				<td>${job.jobStatus.toString()}</td>
+				<td>${job.deliveryDateTime.format('dd MMM yyyy hh:mm:ss')}</td>
+				<td>${job.submitionDateTime.format('dd MMM yyyy hh:mm:ss')}</td>
+				#{if job.microWorker}
+					<td>${job.microWorker.id}</td>
+				#{/if}
+				#{else}
+					<td>Not Assigned</td>
+				#{/else}
+				<td><a href="/ViewMicroJob/${job.microJobID}">View Details</a>|<a href="/EditMicroJob/${job.microJobID}">Edit</a>|<a href="/DeleteMicroJob/${job.microJobID}">Delete</a></td> 
+	     	</tr>
+			#{/list}
+	     	</table>
+	     	
+	     	<br/>
+			#{if !jobs.size()}
+	     	<div style="text-align:center">
+	     		No jobs listed.
+	     	</div>
+			#{/if}
+    	</td>
+    </tr>
+    </table>
+    </section>
+		     
+        

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="10dp"
+            android:text="Account Type" />
+        <Spinner
+	        android:id="@+id/role"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:entries="@array/AccountType"
+        />
+
+	</LinearLayout>
+	        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Username" />
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="textPersonName" >
+
+            <requestFocus />
+        </EditText>
+
+        <ImageButton
+            android:id="@+id/imageButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/search" />
+
+    </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter a password" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPassword" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Retype the same password" />
+
+        <EditText
+            android:id="@+id/passwordConfirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPassword" />
+	
+    
+    <ExpandableListView
+        android:id="@+id/information"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </ExpandableListView>
+
+    <TextView
+            android:id="@+id/paymentMethod"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Preferred Method of Payment" />
+
+       <Spinner
+	        android:id="@+id/prefferedPayment"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:prompt="@string/ppmethod"
+	        android:entries="@array/PaymentType"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="0dp"
+            android:text="Go To Profile" />
+
+        <Button
+            android:id="@+id/finish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="0dp"
+            android:text="Finish" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/inner_content"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:orientation="vertical">
+	    
+	    <ImageView
+	        android:id="@+id/Logo"
+	        android:layout_width="match_parent"
+	        android:layout_height="64dp"
+	        android:src="@drawable/micro" />
+	
+	        <EditText
+	            android:id="@+id/username"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:inputType="textPersonName"
+	            android:paddingTop="10dp"
+	            android:layout_marginLeft="15dp"
+	        	android:layout_marginTop="5dp"
+	        	android:layout_marginBottom="5dp"
+	        	android:layout_marginRight="15dp"
+	        	android:background="@drawable/edittext"
+				android:text="Username"/>
+	        
+	        <EditText
+	            android:id="@+id/password"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:inputType="textPassword"
+	            android:paddingTop="10dp"
+	            android:layout_marginLeft="15dp"
+	        	android:layout_marginTop="5dp"
+	        	android:layout_marginBottom="5dp"
+	        	android:layout_marginRight="15dp"
+	        	android:background="@drawable/edittext"
+	            android:text="Password" />
+	        
+	    <Button
+	        android:id="@+id/login"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:background="@drawable/button_custom"
+	        android:paddingTop="10dp"
+	        android:layout_margin="5dp"
+	        android:text="Login" />
+	
+	    <Button
+	        android:id="@+id/signup"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:background="@drawable/button_custom"
+	        android:paddingTop="10dp"
+	        android:layout_margin="5dp"
+	        android:text="Sign Up" />
+	    <Button
+	        android:id="@+id/jobScreen"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:text="Show Job Screen" />
+	    <Button
+	        android:id="@+id/evaluation"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:text="Evaluation Form" />
+	    <Button
+	        android:id="@+id/jobPost"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:text="Post a Job" />
+	    <Button
+	        android:id="@+id/device"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:text="Show Device Token" />
+	    
+	</LinearLayout>
+</RelativeLayout>

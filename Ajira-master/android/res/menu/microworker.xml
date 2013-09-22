@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+	<item android:id="@+id/profSettings"
+	android:title="Profile Settings" />
+	<!-- android:icon="@drawable/help -->
+	<item android:id="@+id/favslist"
+	android:title="Change Favslist" />
+	<item android:id="@+id/qualityMetric"
+	android:title="Change Quality Metrics" />
+	<!-- android:icon="@drawable/help -->
+	<item android:id="@+id/evaluate"
+	android:title="Fill Out Evaluation" />
+	<item android:id="@+id/jobPost"
+	android:title="Post A Job" />
+</menu>

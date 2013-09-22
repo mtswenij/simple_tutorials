@@ -1,0 +1,23 @@
+# Ignore Play! working directory #
+db/**
+eclipse/**
+lib/**
+log/**
+logs/**
+modules/**
+modules/**/*
+precompiled/**
+project/project/**
+project/target/**
+target/**
+war/**
+war/WEB-INF/**
+war/WEB-INF/appengine-generated/**
+tmp/**
+tmp/**/*
+test-result/**
+server.pid
+*.iml
+*.eml
+*.conf
+*.src

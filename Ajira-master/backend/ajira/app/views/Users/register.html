@@ -1,0 +1,39 @@
+#{extends 'main.html' /}
+#{set title:'Register' /}
+
+<section class="content-wrapper main-content clear-fix">
+	<h1>Create an Ajira Account</h1>
+	<form action="/Register" method="post">
+	<fieldset>
+		<p>
+        <label>First Name</label>
+        <input type="text" name="firstName" placeholder="Your first name."/>
+        </p>
+		<p>
+        <label>Last Name</label>
+        <input type="text" name="lastName" placeholder="Your last name."/>
+        </p>
+		<p>
+        <label>User Name</label>
+        <input type="text" name="userName"  placeholder="Enter a username."/> 
+        </p>
+		<p>
+		<label>Email</label>
+		<input type="text" name="email"  placeholder="Enter an email address."/> 
+        </p>
+		<p>
+        <label>Mobile Phone Number</label>
+        <input type="text" name="mobilePhoneNumber" placeholder="1234567890" maxlength=10/>
+        </p>
+		<p>
+        <label>Password</label>
+        <input type="password" name="passwd" />
+        </p>
+        <p>
+        <label>Confirm Password</label>
+        <input type="password" name="passwdConfirm"/>
+        </p>
+        <input type="submit" value="Register"/>
+	</fieldset>
+	</form>
+</section>

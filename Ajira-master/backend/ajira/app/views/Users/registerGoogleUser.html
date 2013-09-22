@@ -1,0 +1,36 @@
+#{extends 'main.html' /}
+#{set title:'Register Google User' /}
+
+<section class="content-wrapper main-content clear-fix">
+	<h1>Register Ajira User [Google]</h1>
+	<form action="/RegisterGoogleUser" method="post">
+	<fieldset>
+		<h2>User Email: <b style="color:blue">${newUser.email}</b></h2>
+		<p>
+        <label>User Name</label>
+        <input type="text" name="userName"  placeholder="${newUser.userName}"/> 
+        </p>
+		<p>
+        <label>First Name</label>
+        <input type="text" name="firstName" placeholder="Your first name."/>
+        </p>
+		<p>
+        <label>Last Name</label>
+        <input type="text" name="lastName" placeholder="Your last name."/>
+        </p>
+		<p>
+        <label>Mobile Phone Number</label>
+        <input type="text" name="mobilePhoneNumber" placeholder="123-456-7890"/>
+        </p>
+		<p>
+        <label>Password</label>
+        <input type="password" name="passwd" />
+        </p>
+        <p>
+        <label>Confirm Password</label>
+        <input type="password" name="passwdConfirm"/>
+        </p>
+        <input type="submit" value="Register"/>
+	</fieldset>
+	</form>
+</section>

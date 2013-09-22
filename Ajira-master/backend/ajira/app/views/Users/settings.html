@@ -1,0 +1,23 @@
+#{extends 'main.html' /}
+#{set title:'Settings' /}
+
+<section class="content-wrapper main-content clear-fix">
+	<h1>Account Settings</h1>
+	
+	<label>Email Address</label>
+	<p>${currentUser.email}<p>
+	<label>User Name</label>
+	<p>${currentUser.userName}<p>
+	<label>Name</label>
+	<p>${currentUser.firstName} ${currentUser.lastName}<p>
+	<label>Mobile Phone Number</label>
+	<p>${currentUser.mobilePhoneNumber}<p>
+	<label>Account Creation Date</label>
+	<p>${currentUser.creationDate}<p>
+	#{if production}
+	<label>Password</label>(Won't show in production)
+	<p>${currentUser.passwd}<p>
+	<label>AuthToken</label>(Won't show in production)
+	<p>${currentUser.authToken}<p>
+	#{/if}
+</section>

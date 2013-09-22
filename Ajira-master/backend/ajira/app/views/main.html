@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>#{get 'title' /}</title>
+        <meta charset="${_response_encoding}">
+        <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/main.css'}">
+        #{get 'moreStyles' /}
+        <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}">
+        <script src="@{'/public/javascripts/jquery-1.6.4.min.js'}" type="text/javascript" charset="${_response_encoding}"></script>
+        #{get 'moreScripts' /}
+        <meta name="viewport" content="width=device-width" />
+        
+        <!-- Scripts -->
+        <script>
+		function getDashBoard(role)
+		{
+			switch(role)
+			{
+			case "0":
+				window.location.href = '/MicroEmployer';
+			  break;
+			case "1":
+				window.location.href = '/MicroWorker';
+			  break;
+			default:
+				window.location.href = '/MicroEmployer';
+			}
+		}
+		</script>
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHEOLYN5h9xZG5NjOJuiZxw3uLMt2tugQ&sensor=false"></script>
+	    <script type="text/javascript">
+	      function initialize() {
+	        var mapOptions = {
+	          center: new google.maps.LatLng(38.921160, -77.02040000000001),
+	          zoom: 15,
+	          mapTypeId: google.maps.MapTypeId.ROADMAP
+	        };
+	        
+	        var mapOptionsHome = {
+	  	          center: new google.maps.LatLng(38.921160, -77.02040000000001),
+	  	          zoom: 5,
+	  	          mapTypeId: google.maps.MapTypeId.ROADMAP
+	  	        };
+	        
+	        var map = new google.maps.Map(document.getElementById("map_canvas"),mapOptions);
+	        var mapHome = new google.maps.Map(document.getElementById("map_canvas_home"),mapOptionsHome);
+	      }
+    	</script>
+    </head>
+    <body onload="initialize()">
+        <header>
+            <div class="content-wrapper">
+                <div class="float-left">
+                    <p class="site-title"><!--img style="height:25px; width:auto" src="/public/images/favicon.png"/--><a href="/">AjirA</a></p>
+                </div>
+                <div class="float-right">
+                    <section id="login">
+                    	#{if user}
+                            Hello, ${user} | <a href="/AccountSettings">Account Settings</a> | <a href="/Logout" id="loginLink" >Logout</a>
+                        #{/if}
+                        #{else}
+                        <ul>
+					        <li><a href="/Register" id="registerLink">Register</a></li>
+					        <li><a href="/Login" id="loginLink">Log in</a></li>
+					    </ul>
+                        #{/else}
+                    </section>
+                    <nav>
+                        <ul id="menu">
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/About">About</a></li>
+                            <li><a href="/Contact">Contact</a></li>
+                            #{if user}
+                            	<li><a href="/MicroEmployer">Dash-Board</a></li>
+                            #{/if}
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <div id="body">
+            #{doLayout /}
+    	</div>
+        <footer>
+            <div class="content-wrapper">
+                <div class="float-left">
+                <p> Copyright &copy; ${new Date().format('yyyy')} - Ajira Huduma</p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

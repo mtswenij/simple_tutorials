@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <listpreference android:entries="@array/date_format_array"
+
+        	android:key="date" android:persistent="true" 
+        	android:title="Change Date format">
+    </listpreference>  
+
+</PreferenceScreen>

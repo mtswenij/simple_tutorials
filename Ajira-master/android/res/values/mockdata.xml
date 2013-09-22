@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="names">
+        <item >Malik Miskell</item>
+		<item >Molly Clagon</item>
+		<item >Isabell Spoor</item>
+		<item >Hans Holgate</item>
+		<item >Taryn Springs</item>
+		<item >Gaylord Garfinkel</item>
+		<item >Francie Sturdivant</item>
+		<item >Mikki Riese</item>
+		<item >Foster Okamura</item>
+		<item >Elane Scheuerman</item>
+    </string-array>
+    <string-array name="JobTitles">
+        <item >Pizza Delivery</item>
+		<item >Website Making</item>
+		<item >Subway Delivery</item>
+		<item >Sodexho Delivery</item>
+		<item >PetCare</item>
+		<item >Bouquet Delivery</item>
+		<item >Laundromat Delivery</item>
+		<item >Grocery Collection</item>
+		<item >Chinese Food Delivery</item>
+		<item >Coffee Delivery</item>
+    </string-array>
+    <string name="tenDollars">$10</string>
+    <string name="deliverydatetime">05/05/05 3:00pm</string>
+    <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend bibendum odio. Nulla facilisi. Donec lectus quam, vulputate in egestas in, pretium vel mauris. Suspendisse sagittis quam id diam blandit et fringilla tellus ornare. Pellentesque non dui non ligula iaculis elementum id luctus leo. Vivamus tortor augue, sodales et aliquet id, consectetur at arcu. Donec tincidunt hendrerit nisl, sit amet consequat arcu interdum id.</string>
+	<string name="CurrentDeliveryLocation">1600 Bogus St, Washington, GO</string>
+	<string-array name="date_format_array">
+        <item>31/12/2011</item>
+        <item>12/31/2011</item>
+        <item>2011/12/31</item>
+    </string-array>
+ 
+<string-array name="date_format_values">
+        <item>31/12/2011</item>
+        <item>12/31/2011</item>
+        <item>2011/12/31</item>
+    </string-array>
+ <string-array name="updateInterval">
+        <item name="1000">Every 1 second</item>
+        <item name="5000">Every 5 seconds</item>
+        <item name="30000">Every 30 seconds</item>
+        <item name="60000">Every 1 minute</item>
+        <item name="300000">Every 5 minutes</item>
+    </string-array>
+    
+    <string-array name="updateIntervalValues">
+        <item name="1000">1000</item>
+        <item name="5000">5000</item>
+        <item name="30000">30000</item>
+        <item name="60000">60000</item>
+        <item name="300000">300000</item>
+    </string-array>
+</resources>

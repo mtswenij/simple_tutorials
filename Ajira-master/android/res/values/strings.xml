@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, microeActivity!</string>
+    <string name="app_name">micro-emp-project</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_create_new_micro_job">CreateNewMicroJob</string>
+    <string name="title_activity_review_new_micro_job">ReviewNewMicroJob</string>
+	<string name="MicroJobDescription">Description of Services</string>
+	<string name="DeliveryDate">Delivery Date</string>
+	<string name="DeliveryTime">Delivery Time</string>
+	<string name="ChangeQualitySettings">Change Quality Settings</string>
+	<string name="ChangeDeliveryLocation">Change Delivery Location</string>
+	<string name="MaxPrice">Max Price</string>
+	<string name="ReviewMicroJob">Review MicroJob</string>
+	<string name="QualitySettings">Quality Settings</string>
+	
+	
+	<string-array name="AccountType">
+	    <item>Worker</item>
+	    <item>Employer</item>
+	</string-array>
+	<string-array name="PaymentType">
+	    <item>Credit Card</item>
+	    <item>Airtime</item>
+	    <item>M-Pesa</item>
+	    <item>Gwallet</item>
+	    <item>PayPal</item>
+	</string-array>
+	<string-array name="MicroWorkerOptions">
+	    <item>Change Favorite List</item>
+	    <item>Change Payment Information</item>
+	    <item>Change User Information</item>
+	    <item>Change Quality Metrics</item>
+	    <item>Evaluations</item>
+	    <item>Notifications</item>
+	    <item>Profile Settings</item>
+	    <item>Preferences</item>
+	</string-array>
+	<string name="ppmethod">Preferred Payment Method</string>
+</resources>

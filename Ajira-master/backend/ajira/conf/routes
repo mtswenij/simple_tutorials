@@ -1,0 +1,178 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+*       /admin                                  module:crudsiena
+
+#####Website#####
+
+#Home page
+GET     /                                       Application.index
+
+#Contact
+GET		/Contact								Application.contact
+
+#About
+GET		/About									Application.about
+
+#####Mobile#####
+
+#Mobile Login
+GET     /Mobile/Login                           Mobile.login
+
+#Mobile Logout
+GET		/Mobile/Logout/{authToken}				Mobile.logout 
+
+#Mobile Register
+GET		/Mobile/Register						Mobile.register
+
+#Mobile MicroJob Manager Interface
+GET		/Mobile/CreateMicroJob/{authToken}							Mobile.CreateMicroJob
+
+GET		/Mobile/GetMicroJob/{authToken}								Mobile.GetMicroJob
+
+GET		/Mobile/UpdateMicroJob/{authToken}							Mobile.UpdateMicroJob
+
+GET		/Mobile/DeleteMicroJob/{authToken}							Mobile.DeleteMicroJob
+
+GET		/Mobile/GetAllMicroJobsByEmployerID/{authToken}				Mobile.GetAllMicroJobsByEmployerID
+
+GET		/Mobile/GetAllMicroJobsByWorkerID/{authToken}				Mobile.GetAllMicroJobsByWorkerID
+
+GET		/Mobile/GetCurrentMicroJobsByEmployerID/{authToken}			Mobile.GetCurrentMicroJobsByEmployerID
+
+GET		/Mobile/GetCurrentMicroJobsByWorkerID/{authToken}			Mobile.GetCurrentMicroJobsByWorkerID
+
+GET		/Mobile/GetPastMicroJobsByEmployerID/{authToken}			Mobile.GetPastMicroJobsByEmployerID
+
+GET		/Mobile/GetPastMicroJobsByWorkerID/{authToken}				Mobile.GetPastMicroJobsByWorkerID
+
+GET		/Mobile/GetMicroJobsByLocation/{authToken}					Mobile.GetMicroJobsByLocation
+
+GET		/Mobile/GetMicroJobsByCategories/{authToken}				Mobile.GetMicroJobsByCategories
+
+GET		/Mobile/GetMicroJobsByLocationAndByCategories/{authToken}	Mobile.GetMicroJobsByLocationAndByCategories
+
+GET		/Mobile/CreateMicroJobAuction/{authToken}					Mobile.CreateMicroJobAuction
+
+GET		/Mobile/UpdateMicroJobAuction/{authToken}					Mobile.UpdateMicroJobAuction
+
+GET		/Mobile/DeleteMicroJobAuction/{authToken}					Mobile.DeleteMicroJobAuction
+
+GET		/Mobile/GetBids/{authToken}									Mobile.GetBids
+
+GET		/Mobile/GetOpenAuctions/{authToken}							Mobile.GetOpenAuctions
+
+GET		/Mobile/GetClosedAuctions/{authToken}						Mobile.GetClosedAuctions
+
+GET		/Mobile/GetPendingAuctions/{authToken}						Mobile.GetPendingAuctions
+
+GET		/Mobile/GetAuctions/{authToken}								Mobile.GetAuctions
+
+GET		/Mobile/AcceptMicroJob/{authToken}							Mobile.AcceptMicroJob
+
+GET		/Mobile/DeclineMicroJob/{authToken}							Mobile.DeclineMicroJob
+
+GET		/Mobile/SetMicroJobStatus/{authToken}						Mobile.SetMicroJobStatus
+
+GET		/Mobile/CompleteMicroJob/{authToken}						Mobile.CompleteMicroJob
+
+#####MicroEmployer#####
+
+#Dash-Board Current MicroJobs
+GET		/MicroEmployer							MicroEmployer.index
+
+#Dash-Board Past MicroJobs
+GET		/MicroEmployer/PastMicroJobs			MicroEmployer.pastMJ
+
+#Dash-Board All MicroJobs
+GET		/MicroEmployer/AllMicroJobs				MicroEmployer.allMJ
+
+#####MicroWorker#####
+
+#Dash-Board
+GET		/MicroWorker							MicroWorker.index
+
+#Dash-Board Past MicroJobs
+GET		/MicroWorker/PastMicroJobs				MicroWorker.pastMJ
+
+#Dash-Board All MicroJobs
+GET		/MicroWorker/AllMicroJobs				MicroWorker.allMJ
+
+#Dash-Board
+GET		/MicroWorker/RecommendedMicroJobs		MicroWorker.recommendedMJ
+
+#Dash-Board Past MicroJobs
+GET		/MicroWorker/SearchMicroJobs			MicroWorker.searchMJ
+
+#Dash-Board All MicroJobs
+GET		/MicroWorker/Bids						MicroWorker.bids
+
+GET 	/PlaceBid/{id}							MicroWorker.placeBid
+
+POST 	/PlaceBid								MicroWorker.placeBidPost
+
+#####Maps######
+
+GET     /ViewMap/{mapType}						MapView.index
+
+#####Administrator#####
+
+#Dash-Board
+GET		/Administrator							Administrator.index
+
+#####Users#####
+
+#Login
+GET		/Login									Users.login
+
+#Logout
+GET		/Logout									Users.logout
+
+#Validate Login
+POST 	/Login									Users.validateLogin
+
+#Account Settings
+GET		/AccountSettings							Users.settings
+
+#Register User
+GET		/Register								Users.register
+
+#Register
+POST	/Register								Users.createUser
+
+#Google Login
+GET 	/GoogleLogin							Users.loginGoogleUser
+
+#Register Google User	
+GET		/RegisterGoogleUser						Users.registerGoogleUser
+
+#Create Google User	
+POST	/RegisterGoogleUser						Users.createGoogleUser
+
+#####MicroJobs#####
+
+#New Micro Job
+GET 	/NewMicroJob							MicroJobs.newMJ
+
+#New Micro Job
+POST 	/NewMicroJob							MicroJobs.createMicroJob
+
+#View Micro Job
+GET 	/ViewMicroJob/{id}						MicroJobs.viewMJ
+
+#Edit Micro Job
+GET 	/EditMicroJob/{id}						MicroJobs.editMJ
+
+#Delete Micro Job
+GET 	/DeleteMicroJob/{id}					MicroJobs.deleteMJ
+
+#####Play Routes#####
+
+# Ignore favicon requests
+GET     /public/images/favicon.png                            404
+
+# Map static resources from the /app/public folder to the /public path
+GET     /public/                                staticDir:public
+
+# Catch all
+*       /{controller}/{action}                  {controller}.{action}
